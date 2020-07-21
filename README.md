@@ -1,6 +1,6 @@
 # ActivKids frontend
 
-This is a frontend application for ActivKids application. A web application for listing and displaying activities for kids and young adults. User can also add new activities based off the different groups. 
+This is a frontend react-redux application for ActivKids application. A web application for listing and displaying activities for kids and young adults. User can also add new activities based off the different groups. 
 
 # Installation
 
