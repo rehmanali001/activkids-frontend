@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import NewCounter from "./temp.js"
 
 export class CategoryPageComponent extends Component {
+
   render() {
     const sectionStyle = {
       backgroundImage:
@@ -26,6 +28,7 @@ export class CategoryPageComponent extends Component {
             <Link to={url} className="App-link">
               {activity.name}
             </Link>
+            <NewCounter key={idx}/>
           </li>
         );
       });
@@ -35,8 +38,8 @@ export class CategoryPageComponent extends Component {
       <div style={sectionStyle}>
         <br />
         <h1> Activities for {category.title}</h1>
-        <ul>{activitiesForCategory}</ul>
-        <br />
+        <ul>{activitiesForCategory}
+        </ul>
         <div>
           <Link to="/activities-new" className="App-link">
             Add new
@@ -45,6 +48,7 @@ export class CategoryPageComponent extends Component {
       </div>
     );
   }
+
 }
 const mapStateToProps = state => ({
   activities: state.manageActivities.activities,

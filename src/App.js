@@ -22,8 +22,8 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <MenuComponent categories={this.props.categories} />
-        <Router>
+          <Router>
+          <MenuComponent categories={this.props.categories} />
           <Route exact path="/" component={HomePageComponent} />
           <Route exact path="/categories" component={CategoriesPageComponent} />
           <Route path="/categories/:id" component={CategoryPageComponent} />

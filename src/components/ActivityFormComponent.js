@@ -33,9 +33,11 @@ class ActivityFormComponent extends Component {
     });
   };
 
-  handleOnSubmit = event => {
+  handleOnSubmit = event => { // ACBD
     event.preventDefault();
+    console.log('A');
     this.props.addActivity(this.state);
+    console.log('B');
     this.setState({
       name: "",
       address: "",

@@ -34,6 +34,7 @@ export function loadActivities() {
 }
 
 export function addActivity(activity) {
+  console.log('C');
   return function(dispatch) {
     const body = JSON.stringify({ activity });
     const headers = {
@@ -42,6 +43,7 @@ export function addActivity(activity) {
     fetch("/activities", { method: "POST", body, headers })
       .then(resp => resp.json())
       .then(activity => {
+        console.log('D');
         dispatch(addActivitySuccess(activity));
       })
       .catch(error => {
